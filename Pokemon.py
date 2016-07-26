@@ -10,7 +10,7 @@ class Pokemon(object):
         self.multi = multi
         self.att = self.base_attack * self.multi
         self.defense = self.base_def * self.multi
-        self.hp = self.basesta * self.multi
+        self.hp = self.base_sta * self.multi
 
     def dec_hp(self, damage):
         self.hp -= damage
@@ -21,3 +21,6 @@ class Pokemon(object):
             return True
         else:
             return False
+
+    def get_hp(self):
+        return self.base_sta
